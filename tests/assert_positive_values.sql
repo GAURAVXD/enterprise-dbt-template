@@ -1,0 +1,3 @@
+SELECT *
+FROM {{ ref('MODEL_NAME') }}
+WHERE VALUE_COLUMN <= 0
