@@ -1,0 +1,19 @@
+name: dbt CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  dbt-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run dbt CI checks
+        run: |
+          echo "Run dbt build here"
+          echo "Validate models, tests, and standards"
